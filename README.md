@@ -2,7 +2,7 @@
 
 * Shopify JavaScript Buy SDK
 * React
-* Atomize
+* Atomize - UI design system for web apps.
 * Styletron
 * React-router
 
