@@ -34,6 +34,10 @@ class ShopProvider extends Component {
     client.product.fetch(id).then((product) => { this.setState({ product: product }) });
   }
 
+  closeCart = () => { this.setState( {isCartOpen: false} )}
+
+  openCart = () => { this.setState( {isCartOpen: true} )}
+
 
   render() {
     return (
