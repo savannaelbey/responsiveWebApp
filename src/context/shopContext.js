@@ -30,6 +30,9 @@ class ShopProvider extends Component {
     client.product.fetchAll().then((products) => { this.setState({ products: products }) });
   }
 
+  fetchProductWithId = async (id) => {
+    client.product.fetch(id).then((product) => { this.setState({ product: product }) });
+  }
 
 
   render() {
