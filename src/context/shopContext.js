@@ -4,7 +4,7 @@ import Client from 'shopify-buy';
 const ShopContext = React.createContext();
 // Initializing a client to return content in the store's primary language
 const client = Client.buildClient({
-  domain: 'goldenshoe.myshopify.com',
+  domain: 'graphql.myshopify.com',
   storefrontAccessToken: 'dd4d4dc146542ba7763305d71d1b3d38'
 });
 
@@ -18,9 +18,15 @@ class ShopProvider extends Component {
     test: 'test'
   }
 
-  createCheckout = async () => {
-    client.checkout.create().then((checkout) => {console.log(checkout)});
+  componentDidMount() {
+    this.createCheckout();
   }
+
+  createCheckout = async () => {
+    client.checkout.create().then((checkout) => { this.setState({ checkout: checkout }) });
+  }
+
+  
 
   render() {
     return (
