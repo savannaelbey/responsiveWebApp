@@ -26,7 +26,11 @@ class ShopProvider extends Component {
     client.checkout.create().then((checkout) => { this.setState({ checkout: checkout }) });
   }
 
-  
+  fetchAllProducts = async () => {
+    client.product.fetchAll().then((products) => { this.setState({ products: products }) });
+  }
+
+
 
   render() {
     return (
