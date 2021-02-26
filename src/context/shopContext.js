@@ -34,6 +34,14 @@ class ShopProvider extends Component {
     client.product.fetch(id).then((product) => { this.setState({ product: product }) });
   }
 
+  addItemToCard = async (variantId, quantity) => {
+    const lineItemsToAdd = [{
+      variantId,
+      quantity: parseInt(quantity, 10)
+    }]
+    client.checkout.addLineItems(this.state.checkout.id, lineItemsToAdd).then((checkout) => { this.setState({ checkout: checkout }) });
+  }
+
   closeCart = () => { this.setState( {isCartOpen: false} )}
 
   openCart = () => { this.setState( {isCartOpen: true} )}
