@@ -17,6 +17,11 @@ class ShopProvider extends Component {
     isCartOpen: false,
     test: 'test'
   }
+
+  createCheckout = async () => {
+    client.checkout.create().then((checkout) => {console.log(checkout)});
+  }
+
   render() {
     return (
       <ShopContext.Provider value={{...this.state}}>
