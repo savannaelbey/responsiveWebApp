@@ -34,7 +34,7 @@ class ShopProvider extends Component {
     client.product.fetch(id).then((product) => { this.setState({ product: product }) });
   }
 
-  addItemToCard = async (variantId, quantity) => {
+  addItemToCheckout = async (variantId, quantity) => {
     const lineItemsToAdd = [{
       variantId,
       quantity: parseInt(quantity, 10)
@@ -46,10 +46,16 @@ class ShopProvider extends Component {
 
   openCart = () => { this.setState( {isCartOpen: true} )}
 
-
   render() {
     return (
-      <ShopContext.Provider value={{...this.state}}>
+      <ShopContext.Provider value={{
+        ...this.state,
+        fetchAllProducts: this.fetchAllProducts,
+        fetchProductWithId: this.fetchProductWithId,
+        closeCart: this.closeCart,
+        openCart: this.openCart,
+        addItemToCheckout: this.addItemToCheckout
+      }}>
         {this.props.children}
       </ShopContext.Provider>
     )
