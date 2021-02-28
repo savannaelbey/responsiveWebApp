@@ -18,7 +18,7 @@ function App() {
       <StyletronProvider value={engine} debug={debug} debugAfterHydration>
         <Router>
           <Switch>
-            <Router path='/product'>
+            <Router path='/product/:id'>
               <ProductPage/>
             </Router>
             <Router path='/'>
