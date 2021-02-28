@@ -9,3 +9,4 @@
 
 ## Resources
 http://shopify.github.io/js-buy-sdk/
+https://reactrouter.com/web/example/url-params
