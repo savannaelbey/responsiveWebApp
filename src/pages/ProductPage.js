@@ -20,12 +20,23 @@ const ProductPage = () => {
   return (
     <Container>
       <Row>
-        <Col>
-          <Div bgImg={product.images[0].src} shadow="3" bgSize="cover" w="100%" bgPos="center center" h="40rem"/>
+        <Col >
+          <Div d="flex"
+              h="40rem"
+              bgImg={product.images[0].src}
+              bgSize="cover"
+              bgPos="center"
+              shadow="3"
+              hoverShadow="4"
+              transition="0.3s"
+              w="100%"
+              m={{ b: "0.7rem" }}
+              >
+          </Div>
         </Col>
         <Col>
-          <Text>{product.title}</Text>
-          <Text>{(product.variants[0].price * 1.05).toFixed(2)}</Text>
+          <Text textWeight="300" textAlign="center" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
+          <Text textWeight="400" textAlign="center" textSize="body" textDecor="none" textColor="gray500">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
           <Button onClick={() => {
             addItemToCheckout(product.variants[0].id, 1);
             openCart();
@@ -33,6 +44,7 @@ const ProductPage = () => {
             Add To Bag
           </Button>
         </Col>
+
       </Row>
     </Container>
   )

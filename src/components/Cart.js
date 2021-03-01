@@ -29,10 +29,10 @@ const Cart = () => {
                                         <Col>
                                             <Text>{item.title}</Text>
                                             <Text>{item.variant.title}</Text>
-                                            <Text>{item.quantity}</Text>
+                                            <Text>Quantity: {item.quantity}</Text>
                                         </Col>
                                         <Col>
-                                            <Text>{(item.variant.price *1.05).toFixed(2)}</Text>
+                                            <Text>£{(item.variant.price *1.05).toFixed(2)}</Text>
                                         </Col>
                                     </Row>
                                 ))}
