@@ -25,7 +25,7 @@ const ProductPage = () => {
         </Col>
         <Col>
           <Text>{product.title}</Text>
-          <Text>{product.variants[0].price}</Text>
+          <Text>{(product.variants[0].price * 1.05).toFixed(2)}</Text>
           <Button onClick={() => {
             addItemToCheckout(product.variants[0].id, 1);
             openCart();

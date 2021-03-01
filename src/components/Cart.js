@@ -18,11 +18,10 @@ const Cart = () => {
                 <Text>Quantity: {item.quantity}</Text>
               </Col>
               <Col>
-                <Text>£{item.variant.price}</Text>
+                <Text>£{(item.variant.price * 1.05).toFixed(2)}</Text>
               </Col>
             </Row>
           ))}
-          // webUrl redirects to shopify's checkout in a new window
           <Anchor href={checkout.webUrl} target='_blank'>Checkout</Anchor>
         </Div>
     </SideDrawer>

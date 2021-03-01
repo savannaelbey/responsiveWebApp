@@ -30,7 +30,7 @@ const HomePage = () => {
                   bgPos="centre centre"
                 />
                 <Text>{product.title}</Text>
-                <Text>{product.variants[0].price}</Text>
+                <Text>{(product.variants[0].price * 1.05).toFixed(2)}</Text>
               </Div>
             </Link>
           </Col>
