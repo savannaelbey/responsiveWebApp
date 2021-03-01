@@ -19,22 +19,27 @@ const HomePage = () => {
   return (
     <Container>
       <Row>
-        {products.map(product => (
-          <Col key={product.id} size="3" >
-            <Link to={`/product/${product.id}`} >
-              <Div p="2rem">
-                <Div
+      {products.map(product => (
+  <Col key={product.id} size="3" >
+      <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+          <Div p="2rem">
+              <Div
                   h="20rem"
                   bgImg={product.images[0].src}
                   bgSize="cover"
-                  bgPos="centre centre"
-                />
-                <Text>{product.title}</Text>
-                <Text>{(product.variants[0].price * 1.05).toFixed(2)}</Text>
+                  bgPos="center center"
+                  shadow="3"
+                  hoverShadow="4"
+                  transition="0.3s"
+                  m={{ b: "1.5rem" }}
+                  >
               </Div>
-            </Link>
-          </Col>
-        ))}
+              <Text tag="h1" textWeight="300" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
+              <Text tag="h2" textWeight="300" textSize="body" textDecor="none" textColor="gray500">${product.variants[0].price}</Text>
+          </Div>
+      </Link>
+  </Col>
+))}
       </Row>
     </Container>
   )
