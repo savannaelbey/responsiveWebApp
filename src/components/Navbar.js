@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <Container d="flex" flexDir="row" p="2rem" justify="space-between">
       <Link to='/'>Shop</Link>
-      <Anchor onClick={() => openCart()}>Shopping Bag</Anchor>
+      <Anchor onClick={() => openCart()}>Bag</Anchor>
     </Container>
   )
 }
