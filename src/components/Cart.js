@@ -22,6 +22,7 @@ const Cart = () => {
               </Col>
             </Row>
           ))}
+          // webUrl redirects to shopify's checkout in a new window
           <Anchor href={checkout.webUrl} target='_blank'>Checkout</Anchor>
         </Div>
     </SideDrawer>
