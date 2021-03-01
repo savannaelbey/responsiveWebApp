@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Client from 'shopify-buy';
 
 const ShopContext = React.createContext();
+
 // Initializing a client to return content in the store's primary language
 const client = Client.buildClient({
   domain: 'graphql.myshopify.com',
@@ -15,7 +16,6 @@ class ShopProvider extends Component {
     product: {},
     checkout: {},
     isCartOpen: false,
-    test: 'test'
   }
 
   componentDidMount() {
@@ -28,10 +28,15 @@ class ShopProvider extends Component {
 
   fetchAllProducts = async () => {
     client.product.fetchAll().then((products) => { this.setState({ products: products }) });
+    // const products = await client.product.fetchAll();
+    // this.setState({ products: products });
   }
 
   fetchProductWithId = async (id) => {
     client.product.fetch(id).then((product) => { this.setState({ product: product }) });
+     // const product = await client.product.fetch(id);
+     // this.setState({ product: product });
+
   }
 
   addItemToCheckout = async (variantId, quantity) => {
@@ -48,20 +53,22 @@ class ShopProvider extends Component {
 
   render() {
     return (
-      <ShopContext.Provider value={{
-        ...this.state,
-        fetchAllProducts: this.fetchAllProducts,
-        fetchProductWithId: this.fetchProductWithId,
-        closeCart: this.closeCart,
-        openCart: this.openCart,
-        addItemToCheckout: this.addItemToCheckout
-      }}>
+      <ShopContext.Provider
+        value={{
+          ...this.state,
+          fetchAllProducts: this.fetchAllProducts,
+          fetchProductWithId: this.fetchProductWithId,
+          closeCart: this.closeCart,
+          openCart: this.openCart,
+          addItemToCheckout: this.addItemToCheckout
+        }}
+      >
         {this.props.children}
       </ShopContext.Provider>
-    )
+    );
   }
 }
 
 const ShopConsumer = ShopContext.Consumer;
-export {ShopConsumer, ShopContext}
-export default ShopProvider
+export {ShopConsumer, ShopContext};
+export default ShopProvider;

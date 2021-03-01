@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import {ShopContext} from '../context/shopContext';
-import { Container, Text, Div, Row, Col } from 'atomize';
+import { Text, Div, Row, Col, Container } from "atomize";
 import {Link} from 'react-router-dom';
 
 const HomePage = () => {
@@ -14,14 +14,14 @@ const HomePage = () => {
   }, [fetchAllProducts])
 
   if(!products) {
-    return <div>loading...</div>
+    return <div>loading</div>
   }
   return (
     <Container>
       <Row>
         {products.map(product => (
-          <Col key={products.id} size="3" >
-            <Link to={`/product/${product.id}`}>
+          <Col key={product.id} size="3" >
+            <Link to={`/product/${product.id}`} >
               <Div p="2rem">
                 <Div
                   h="20rem"

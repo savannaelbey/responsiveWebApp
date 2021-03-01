@@ -1,11 +1,10 @@
 import React from 'react';
 import { Provider as StyletronProvider, DebugEngine } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ShopProvider from '../context/shopContext';
 import HomePage from '../pages/HomePage';
 import ProductPage from '../pages/ProductPage';
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const debug = process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
 
@@ -18,12 +17,12 @@ function App() {
       <StyletronProvider value={engine} debug={debug} debugAfterHydration>
         <Router>
           <Switch>
-            <Router path='/product/:id'>
+            <Route path="/product/:id">
               <ProductPage/>
-            </Router>
-            <Router path='/'>
+            </Route>
+            <Route path="/">
               <HomePage/>
-            </Router>
+            </Route>
           </Switch>
         </Router>
       </StyletronProvider>

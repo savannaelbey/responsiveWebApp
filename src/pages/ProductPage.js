@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
-// import { Container, Text, Div, Row, Col } from 'atomize';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
+import { Text, Div, Button, Row, Col, Container } from 'atomize';
 
 const ProductPage = () => {
   //array destructuring
@@ -15,15 +15,21 @@ const ProductPage = () => {
     };
   }, [ fetchProductWithId, id ])
 
-  if(!product) {
-    return <div>loading...</div>
-  }
+  if (!product.title) return <div>loading</div>
 
   return (
-    <div>
-    PRODUCT PAGE
-    {id}
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <Div bgImg={product.images[0].src} shadow="3" bgSize="cover" w="100%" bgPos="center center" h="40rem"/>
+        </Col>
+        <Col>
+          <Text>{product.title}</Text>
+          <Text>{product.variants[0].price}</Text>
+          <Button onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
