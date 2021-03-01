@@ -16,11 +16,11 @@ const HomePage = () => {
   if(!products) {
     return <div>loading</div>
   }
-  
+
   return (
     <Container>
       <Row >
-      {products.map(product => (
+      {products.slice(0,4).map(product => (
         <Col key={product.id} size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }}>
             <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
                 <Div p="1rem">
@@ -32,11 +32,11 @@ const HomePage = () => {
                         shadow="3"
                         hoverShadow="4"
                         transition="0.3s"
-                        m={{ b: "1.5rem" }}
+                        m={{ b: "0.7rem" }}
                         >
                     </Div>
-                    <Text tag="h1" textWeight="300" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
-                    <Text tag="h2" textWeight="300" textSize="body" textDecor="none" textColor="gray500">${product.variants[0].price}</Text>
+                    <Text tag="h1" textWeight="300" textAlign="center" textSize="subheader" textDecor="none" textColor="black500">{product.title} </Text>
+                    <Text tag="h2" textWeight="500" textAlign="center" textSize="body" textDecor="none" textColor="gray500">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
                 </Div>
             </Link>
         </Col>
