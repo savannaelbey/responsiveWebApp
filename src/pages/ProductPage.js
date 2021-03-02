@@ -54,9 +54,9 @@ const ProductPage = () => {
         </Col>
         <Col>
           <Text tag="h1" textColor="black500" textWeight="200" >{product.title}</Text>
-          <Text tag="h3" m={{ y: '2rem' }} textWeight="200">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
+          <Text tag="h3" textWeight="200">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
           <Col>
-          <Dropdown w={{ xs: '22vw', md: '10vw' }}>
+          <Dropdown m={{ y: '2rem' }} w={{ xs: '22vw', md: '10vw' }}>
             Size
           </Dropdown>
 
