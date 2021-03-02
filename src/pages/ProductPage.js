@@ -8,6 +8,12 @@ const ProductPage = () => {
   let { id } = useParams();
   const { fetchProductWithId, addItemToCheckout, product, openCart } = useContext(ShopContext);
 
+   console.log(product)
+  console.log(product.options)
+  //  console.log(product.options[1])
+  // console.log(product.options[1].values)
+  // console.log(product.options[1].values.map(size => size.value))
+
   useEffect(() => {
     fetchProductWithId(id);
     return () => {
