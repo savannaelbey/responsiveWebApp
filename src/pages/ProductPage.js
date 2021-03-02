@@ -20,9 +20,9 @@ const ProductPage = () => {
   return (
     <Container>
       <Row>
-        <Col >
+        <Col size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }} >
           <Div d="flex"
-              h="40rem"
+              h="20rem"
               bgImg={product.images[0].src}
               bgSize="cover"
               bgPos="center"
