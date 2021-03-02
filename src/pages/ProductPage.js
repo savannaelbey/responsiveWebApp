@@ -34,9 +34,9 @@ const ProductPage = () => {
               >
           </Div>
         </Col>
-        <Col>
-          <Text textWeight="300" textAlign="center" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
-          <Text textWeight="400" textAlign="center" textSize="body" textDecor="none" textColor="gray500">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
+        <Col align="flex-end">
+          <Text textWeight="300" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
+          <Text textWeight="400" textSize="body" textDecor="none" textColor="gray500">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
           <Button onClick={() => {
             addItemToCheckout(product.variants[0].id, 1);
             openCart();
