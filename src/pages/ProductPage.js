@@ -8,8 +8,8 @@ const ProductPage = () => {
   let { id } = useParams();
   const { fetchProductWithId, addItemToCheckout, product, openCart } = useContext(ShopContext);
 
-   console.log(product)
-  console.log(product.options)
+  //console.log(product)
+  //console.log(product.options)
   //  console.log(product.options[1])
   // console.log(product.options[1].values)
   // console.log(product.options[1].values.map(size => size.value))
@@ -42,7 +42,7 @@ const ProductPage = () => {
         </Col>
         <Col align="flex-end">
           <Text textWeight="300" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
-          <Text textWeight="400" textSize="body" textDecor="none" textColor="gray500">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
+          <Text textWeight="500" textSize="body" textDecor="none" textColor="gray500">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
           <Button onClick={() => {
             addItemToCheckout(product.variants[0].id, 1);
             openCart();

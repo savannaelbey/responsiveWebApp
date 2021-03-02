@@ -9,6 +9,8 @@ const client = Client.buildClient({
   storefrontAccessToken: 'dd4d4dc146542ba7763305d71d1b3d38'
 });
 
+console.log(client);
+
 class ShopProvider extends Component {
 
   state = {
@@ -25,20 +27,23 @@ class ShopProvider extends Component {
     } else {
       this.createCheckout();
     }
-
   }
 
   createCheckout = async () => {
     const checkout = await client.checkout.create();
     localStorage.setItem("checkout", checkout.id);
     await this.setState({ checkout: checkout });
-  };
+  }
 
   fetchCheckout = async (checkoutId) => {
     client.checkout.fetch(checkoutId).then((checkout) => {
       this.setState({ checkout: checkout });
     });
   }
+
+  // addDiscount = async (checkoutId, discountCode) => {
+  //   client.checkout.addDiscount(checkoutId, discountCode).then(checkout => { });
+  // }
 
   fetchAllProducts = async () => {
     client.product.fetchAll().then((products) => { this.setState({ products: products }) });
