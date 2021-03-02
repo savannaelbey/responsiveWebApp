@@ -24,7 +24,7 @@ const ProductPage = () => {
   if (!product.title) return <div>loading</div>
 
   return (
-    <Container>
+    <Container >
       <Row>
         <Col size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }} >
           <Div d="flex"
@@ -40,10 +40,11 @@ const ProductPage = () => {
               >
           </Div>
         </Col>
-        <Col align="flex-end">
-          <Text textWeight="300" textSize="subheader" textDecor="none" textColor="black500">{product.title}</Text>
-          <Text textWeight="500" textSize="body" textDecor="none" textColor="gray500">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
-          <Button onClick={() => {
+        <Col>
+          <Text tag="h1" textColor="black500" textWeight="200" m={{ y: '2rem' }}>{product.title}</Text>
+          <Text tag="h3" m={{ y: '2rem' }} textWeight="200">£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
+          <Text tag="p" textSize="paragraph" textColor="gray900" textWeight="200">{product.description}</Text>
+          <Button m={{ y: '2rem' }} onClick={() => {
             addItemToCheckout(product.variants[0].id, 1);
             openCart();
             }}>
