@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 
 
 const debug = process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
@@ -29,6 +30,7 @@ function App() {
               <HomePage/>
             </Route>
           </Switch>
+          <Footer/>
         </Router>
       </StyletronProvider>
     </ShopProvider>
