@@ -4,7 +4,13 @@ import { Row, Anchor, Container, Icon, Col, Text, Div } from "atomize";
 const Footer = () => {
   return (
     <Container>
-      <Row border={{ t: '2px solid' }} p="1rem" borderColor="gray300">
+      <Row border={{ t: '2px solid' }} p="0.3rem" borderColor="gray400">
+      </Row>
+      <Row bg="gray200" p="1rem" >
+        <Col >
+            <Text textColor="black500" textWeight="300" textSize={{ xs: "tiny", md: "caption" }} >&#9400; Golden Shoe 2021. All rights reserved</Text>
+        </Col>
+        <Col size={0}>
           <Anchor w={{ xs: 'auto', md: 'auto', sm: "auto", lg: "auto", xl: "auto"  }} href='http://facebook.com' >
             <Icon name="Facebook" size="20px" color="black" hoverColor="info700" />
           </Anchor>
@@ -14,15 +20,9 @@ const Footer = () => {
           <Anchor w={{ xs: 'auto', md: 'auto', sm: "auto", lg: "auto", xl: "auto" }} href='http://instagram.com' >
             <Icon name="Instagram" size="20px" color="black" hoverColor="info700" />
           </Anchor>
-    </Row>
-    <Row bg="gray300" >
-      <Col size={{ xs: "auto" }} >
-        <Div p="1rem">
-          <Text textColor="black500" textWeight="300" textSize={{ xs: "tiny", md: "caption" }} >&#9400; Golden Shoe 2021. All rights reserved</Text>
-        </Div>
-      </Col>
-    </Row>
-  </Container>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
