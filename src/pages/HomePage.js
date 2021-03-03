@@ -2,6 +2,7 @@ import React, {useContext, useEffect} from 'react';
 import {ShopContext} from '../context/shopContext';
 import { Text, Div, Row, Col, Container } from "atomize";
 import {Link} from 'react-router-dom';
+import SubscriptionForm from '../components/SubscriptionForm';
 
 const HomePage = () => {
   const { fetchAllProducts, products } = useContext(ShopContext);
@@ -19,6 +20,7 @@ const HomePage = () => {
 
   return (
     <Container>
+      <SubscriptionForm/>
       <Row >
       {products.slice(0,4).map(product => (
         <Col key={product.id} size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }}>
