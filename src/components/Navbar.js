@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { Container, Icon, Row, Col, Text, Div } from 'atomize';
+import { Container, Icon, Row, Col, Text, Div, Image } from 'atomize';
 import {Link} from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
+import logo from "../img/golden-shoe-logo.png";
 
 const Navbar = () => {
   const { openCart } = useContext(ShopContext);
@@ -13,12 +14,13 @@ const Navbar = () => {
         <Col size={{xs: 0, sm: 0, md: 0, lg: 1}}>
           <Text> Women </Text>
         </Col>
-        <Col size={{xs: 0, sm: 0, md: 0, lg: 1}}>
+        <Col size={{xs: 0, sm: 0, md: 0, lg: 4}}>
           <Text> Men </Text>
         </Col>
-        <Col bg='black'>
-          <Link to="/"><Icon name="Store" size="30px" color="black" /></Link>
+        <Col>
+          <Link to="/"><Image h="3rem" w="8" src={logo}/></Link>
         </Col>
+
         <Col size={{xs: 0, sm: 0, md: 0, lg: 1}}>
           <Icon name="Search" size="30px" cursor="pointer" />
         </Col>
