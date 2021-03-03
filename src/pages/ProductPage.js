@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
-import { Text, Div, Button, Row, Col, Container, Dropdown, Anchor } from 'atomize';
+import { Text, Div, Button, Row, Col, Container, Dropdown } from 'atomize';
 
 const ProductPage = () => {
   //array destructuring
