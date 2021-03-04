@@ -5,7 +5,7 @@ const SubscriptionForm = () => {
 
   return (
     <Div bg="black900" p="3rem">
-     <Text textAlign="center" p="1rem" textColor="white" >Subscribe to get our newsletter and vouchers</Text>
+     <Text textAlign="center" p="1rem" textColor="white" >Subscribe to receive our newsletter and discount vouchers to use online and instore</Text>
      <Input
        placeholder="Enter your email"
        suffix={

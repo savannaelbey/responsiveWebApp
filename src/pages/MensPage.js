@@ -19,6 +19,9 @@ const MensPage = () => {
 
   return (
     <Container>
+      <Div bg="black900" p="1rem">
+        <Text textSize="title" textAlign="center" p="0.7rem" textColor="white" >Mens</Text>
+      </Div>
       <Row >
       {products.slice(0,4).map(product => (
         <Col key={product.id} size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }}>
