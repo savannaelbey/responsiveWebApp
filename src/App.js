@@ -9,6 +9,7 @@ import WomensPage from './pages/WomensPage';
 import ProductPage from './pages/ProductPage';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
+import CustomerCare from './components/CustomerCare';
 import Footer from './components/Footer';
 
 
@@ -38,6 +39,7 @@ function App() {
               <HomePage/>
             </Route>
           </Switch>
+          <CustomerCare/>
           <Footer/>
         </Router>
       </StyletronProvider>
