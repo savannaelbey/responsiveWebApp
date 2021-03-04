@@ -4,6 +4,7 @@ import { Client as Styletron } from "styletron-engine-atomic";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ShopProvider from './context/shopContext';
 import HomePage from './pages/HomePage';
+import MensPage from './pages/MensPage';
 import ProductPage from './pages/ProductPage';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
@@ -23,8 +24,11 @@ function App() {
           <Navbar/>
           <Cart/>
           <Switch>
-            <Route path="/product/:id">
+            <Route path="/men/product/:id">
               <ProductPage/>
+            </Route>
+            <Route path="/men">
+              <MensPage/>
             </Route>
             <Route path="/">
               <HomePage/>
