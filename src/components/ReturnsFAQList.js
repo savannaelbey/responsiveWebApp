@@ -13,4 +13,4 @@ const ReturnsFAQList = () => {
   );
 }
 
-export default ReturnsFAQList
+export default ReturnsFAQList;
