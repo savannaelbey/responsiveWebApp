@@ -10,16 +10,16 @@ const CustomerCare = () => {
       <Div bg="gray400" p="2rem" >
         <Row>
         <Col >
-            <Text textColor="black500" textWeight="300" textSize='subheader' >Returns</Text>
+            <Text textColor="black600" textWeight="300" textSize='subheader' >Returns</Text>
         </Col>
         <Col >
-            <Text textColor="black500" textWeight="300" textSize='subheader' >Delivery</Text>
+            <Text textColor="black600" textWeight="300" textSize='subheader' >Delivery</Text>
         </Col>
         <Col >
-            <Text textColor="black500" textWeight="300" textSize='subheader' >Sizing</Text>
+            <Text textColor="black600" textWeight="300" textSize='subheader' >Sizing</Text>
         </Col>
         <Col size={0}  >
-            <Text textColor="black500" textWeight="300" textSize='subheader' >Contact us</Text>
+            <Text textColor="black600" textWeight="300" textSize='subheader' >Contact us</Text>
         </Col>
         </Row>
       </Div>
