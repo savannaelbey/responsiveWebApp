@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ShopProvider from './context/shopContext';
 import HomePage from './pages/HomePage';
 import MensPage from './pages/MensPage';
+import WomensPage from './pages/WomensPage';
 import ProductPage from './pages/ProductPage';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route path="/men">
               <MensPage/>
+            </Route>
+            <Route path="/women">
+              <WomensPage/>
             </Route>
             <Route path="/">
               <HomePage/>
