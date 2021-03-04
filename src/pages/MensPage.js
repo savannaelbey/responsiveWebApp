@@ -49,4 +49,4 @@ const MensPage = () => {
   )
 }
 
-export default MensPage
+export default MensPage;
