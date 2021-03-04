@@ -1,7 +1,8 @@
 import React, {useContext, useEffect} from 'react';
 import {ShopContext} from '../context/shopContext';
-import { Text, Div, Row, Col, Container } from "atomize";
+import { Text, Div, Row, Col, Container } from 'atomize';
 import {Link} from 'react-router-dom';
+import MensBanner from '../components/MensBanner';
 
 const MensPage = () => {
   const { fetchAllProducts, products } = useContext(ShopContext);
@@ -19,9 +20,7 @@ const MensPage = () => {
 
   return (
     <Container>
-      <Div bg="black900" p="1rem">
-        <Text textSize="title" textAlign="center" p="0.7rem" textColor="white" >Mens</Text>
-      </Div>
+      <MensBanner/>
       <Row >
       {products.slice(0,4).map(product => (
         <Col key={product.id} size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }}>
