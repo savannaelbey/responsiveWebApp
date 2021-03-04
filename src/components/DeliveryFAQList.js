@@ -1,15 +1,15 @@
 import React from "react";
-import { Div } from "atomize";
+import { Div, Container } from "atomize";
 import FAQItem from "./DeliveryFAQItem";
 
 const DeliveryFAQList = () => {
   return (
-    <Div>
+    <Container>
       <FAQItem/>
       <FAQItem/>
       <FAQItem/>
       <FAQItem/>
-    </Div>
+    </Container>
   );
 }
 

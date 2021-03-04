@@ -1,11 +1,13 @@
 import React from 'react';
-import { Div, Text} from 'atomize';
+import { Div,Container, Text} from 'atomize';
 
 const ReturnsProcess = () => {
   return (
+    <Container>
     <Div>
       <Text textAlign='center' textSize='heading'> Returns Process</Text>
     </Div>
+    </Container>
 
   );
 }

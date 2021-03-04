@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import CustomerCare from './components/CustomerCare';
 import Footer from './components/Footer';
+import ReturnsPage from './pages/ReturnsPage';
 
 
 const debug = process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/">
               <HomePage/>
+            </Route>
+            <Route path="/returns">
+              <ReturnsPage/>
             </Route>
           </Switch>
           <CustomerCare/>

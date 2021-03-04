@@ -12,10 +12,10 @@ const Navbar = () => {
   <Row >
 
         <Col size={{xs: 0, sm: 0, md: 0, lg: 1}}>
-          <Text> Women </Text>
+          <Link to="/women" style={{ textDecoration: 'none' }} >Women</Link>
         </Col>
         <Col size={{xs: 0, sm: 0, md: 0, lg: 4}}>
-          <Text> Men </Text>
+          <Link to="/men" style={{ textDecoration: 'none' }} >Men</Link>
         </Col>
         <Col>
           <Link to="/"><Image h="3rem" w="8" src={logo}/></Link>

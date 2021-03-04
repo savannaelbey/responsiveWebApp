@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Div, Text } from "atomize";
+import { Link } from 'react-router-dom'
 
 const CustomerCare = () => {
   return (
@@ -10,10 +11,10 @@ const CustomerCare = () => {
       <Div bg="gray400" p="2rem" >
         <Row>
         <Col >
-            <Text textColor="black600" textWeight="300" textSize='subheader' >Returns</Text>
+            <Link to="/returns" style={{ textDecoration: 'none' }} >Returns</Link>
         </Col>
         <Col >
-            <Text textColor="black600" textWeight="300" textSize='subheader' >Delivery</Text>
+            <Link to="/delivery" style={{ textDecoration: 'none' }} >Delivery</Link>
         </Col>
         <Col >
             <Text textColor="black600" textWeight="300" textSize='subheader' >Sizing</Text>

@@ -1,9 +1,10 @@
 import React from "react";
-import { Div, Text } from "atomize";
+import { Div, Container, Text } from "atomize";
 import FAQItem from "./ReturnsFAQItem";
 
 const ReturnsFAQList = () => {
   return (
+    <Container>
     <Div>
       <Text textAlign='center' textSize='heading'>FAQs</Text>
     </Div>
@@ -13,6 +14,7 @@ const ReturnsFAQList = () => {
       <FAQItem/>
       <FAQItem/>
     </Div>
+    </Container>
   );
 }
 
