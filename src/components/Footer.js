@@ -4,7 +4,7 @@ import { Row, Anchor, Container, Icon, Col, Text, Div } from "atomize";
 const Footer = () => {
   return (
     <Container>
-      <Row border={{ t: '2px solid' }} p="0.3rem" borderColor="gray400">
+      <Row p="0.3rem" >
       </Row>
       <Row bg="gray200" p="1rem" >
         <Col >
