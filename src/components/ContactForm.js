@@ -85,13 +85,12 @@ const ContactForm = () => {
             How would you like to be contacted?
           </Label>
           <Select id="contact" name="contact">
+            <option value="choose">Choose option</option>
             <option value="phone">Phone</option>
             <option value="email">Email</option>
           </Select>
         </Fieldset>
-        <Container>
-          <Button>SEND MESSAGE</Button>
-        </Container>
+        <Button >Send Message</Button>
       </Form>
     </>
   );

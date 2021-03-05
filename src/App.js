@@ -15,6 +15,7 @@ import ReturnsPage from './pages/ReturnsPage';
 import DeliveryPage from './pages/DeliveryPage';
 import SizingPage from './pages/SizingPage';
 import ContactPage from './pages/ContactPage';
+import ThankyouPage from './pages/ThankyouPage';
 
 
 
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <ContactPage/>
+            </Route>
+            <Route path="/thankyou">
+              <ThankyouPage/>
             </Route>
             <Route path="/">
               <HomePage/>
