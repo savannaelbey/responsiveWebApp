@@ -1,10 +1,11 @@
 import React from "react";
-import { Div, Container } from "atomize";
+import { Text, Container } from "atomize";
 import FAQItem from "./DeliveryFAQItem";
 
 const DeliveryFAQList = () => {
   return (
     <Container>
+      <Text p='1rem' textAlign='center' textSize='heading' style={{ fontWeight: 'bold' }}>FAQs</Text>
       <FAQItem/>
       <FAQItem/>
       <FAQItem/>

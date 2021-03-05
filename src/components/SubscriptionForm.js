@@ -4,8 +4,8 @@ import { Row, Anchor, Container, Icon, Col, Text, Div, Input, Button } from "ato
 const SubscriptionForm = () => {
 
   return (
-    <Div bg="black900" p="3rem">
-     <Text textAlign="center" p="1rem" textColor="white" >Subscribe to receive our newsletter and discount vouchers to use online and instore</Text>
+    <Div bg="gray400" p="2rem">
+     <Text textAlign="center" p="1rem" textColor="black400" >Subscribe to receive our newsletter and discount vouchers to use online and instore</Text>
      <Input
        placeholder="Enter your email"
        suffix={

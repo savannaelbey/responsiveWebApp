@@ -1,14 +1,16 @@
 import React from 'react';
-import deliveryInfo from '../components/DeliveryProcess';
+import DeliveryInfo from '../components/DeliveryProcess';
 import FAQs from '../components/DeliveryFAQList';
-import { Container, Div } from 'atomize';
+import DeliveryBanner from '../components/DeliveryBanner';
+import { Container } from 'atomize';
 
 const DeliveryPage = () => {
   return (
-    <Div>
-      <deliveryInfo/>
+    <Container>
+      <DeliveryBanner/>
+      <DeliveryInfo/>
       <FAQs/>
-    </Div>
+    </Container>
 
   )
 }
