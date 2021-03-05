@@ -7,10 +7,8 @@ import logo from "../img/golden-shoe-logo.png";
 const Navbar = () => {
   const { openCart } = useContext(ShopContext);
   return (
-
-  <Container  p="2rem" >
-  <Row >
-
+    <Container  p="1rem" >
+      <Row >
         <Col size={{xs: 0, sm: 0, md: 0, lg: 1}}>
           <Link to="/women" style={{ color:'black', textDecoration: 'none', fontWeight: 'bold' }} >Women</Link>
         </Col>

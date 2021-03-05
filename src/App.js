@@ -12,6 +12,9 @@ import Cart from './components/Cart';
 import CustomerCare from './components/CustomerCare';
 import Footer from './components/Footer';
 import ReturnsPage from './pages/ReturnsPage';
+import DeliveryPage from './pages/DeliveryPage';
+import SizingPage from './pages/SizingPage';
+
 
 
 const debug = process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
@@ -36,11 +39,17 @@ function App() {
             <Route path="/women">
               <WomensPage/>
             </Route>
-            <Route path="/">
-              <HomePage/>
+            <Route path="/sizing">
+              <SizingPage/>
             </Route>
             <Route path="/returns">
               <ReturnsPage/>
+            </Route>
+            <Route path="/delivery">
+              <DeliveryPage/>
+            </Route>
+            <Route path="/">
+              <HomePage/>
             </Route>
           </Switch>
           <CustomerCare/>

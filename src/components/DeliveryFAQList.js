@@ -13,4 +13,4 @@ const DeliveryFAQList = () => {
   );
 }
 
-export default DeliveryFAQItem;
+export default DeliveryFAQList;
