@@ -11,13 +11,13 @@ const CustomerCare = () => {
       <Div bg="gray400" p="2rem" >
         <Row>
         <Col >
-            <Link to="/returns" style={{ textDecoration: 'none' }} >Returns</Link>
+            <Link to="/returns" style={{ color: 'black', textDecoration: 'none' }} >Returns</Link>
         </Col>
         <Col >
-            <Link to="/delivery" style={{ textDecoration: 'none' }} >Delivery</Link>
+            <Link to="/delivery" style={{ color: 'black', textDecoration: 'none' }} >Delivery</Link>
         </Col>
         <Col >
-            <Text textColor="black600" textWeight="300" textSize='subheader' >Sizing</Text>
+            <Link to="/sizing" style={{ color: 'black', textDecoration: 'none' }}>Sizing</Link>
         </Col>
         <Col size={0}  >
             <Text textColor="black600" textWeight="300" textSize='subheader' >Contact us</Text>
