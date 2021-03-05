@@ -1,17 +1,15 @@
 import React from "react";
-import { Div, Text, Container } from "atomize";
+import { Div, Text } from "atomize";
 
 const ReturnsFAQItem = () => {
+  let question = 'Generate Lorem Ipsum placeholder text?';
+  let answer = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
   return (
-    <Container>
-    <Div>
-      <Text textSize="display1" textAlign="center">Generate Lorem Ipsum placeholder text?</Text>
-      <Text textSize="paragraph" textAlign="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Condimentum id
-      venenatis a condimentum vitae sapien.</Text>
+    <Div p='0.7rem'>
+      <Text textSize="subheader" textAlign="center">{question}</Text>
+      <Text textSize="paragraph" textAlign="center">{answer}</Text>
     </Div>
-    </Container>
-  )
+  );
 }
 
 export default ReturnsFAQItem;

@@ -1,15 +1,14 @@
 import React from 'react';
-import { Text, Div, Row, Col, Container } from 'atomize';
+import { Container, Text, Div } from 'atomize';
+import SizingBanner from '../components/SizingBanner';
 
 const SizingPage = () => {
   return (
     <Container>
-
-      <Div>
-        <Text textAlign="center" >HELLO</Text>
+      <SizingBanner/>
+      <Div p='16rem'>
+        <Text textAlign="center">Sizing guide goes here</Text>
       </Div>
-
-
     </Container>
   );
 }

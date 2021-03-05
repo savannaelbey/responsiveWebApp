@@ -1,19 +1,15 @@
 import React from "react";
-import { Div, Container, Text } from "atomize";
+import { Container, Text } from "atomize";
 import FAQItem from "./ReturnsFAQItem";
 
 const ReturnsFAQList = () => {
   return (
     <Container>
-    <Div>
-      <Text textAlign='center' textSize='heading'>FAQs</Text>
-    </Div>
-    <Div>
+      <Text p='1rem' textAlign='center' textSize='heading' style={{ fontWeight: 'bold' }}>FAQs</Text>
       <FAQItem/>
       <FAQItem/>
       <FAQItem/>
       <FAQItem/>
-    </Div>
     </Container>
   );
 }

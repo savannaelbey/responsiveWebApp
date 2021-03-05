@@ -6,7 +6,7 @@ const WomensPage = () => {
   return (
     <Container>
       <WomensBanner/>
-      <Div p='7rem'>
+      <Div p='12rem'>
         <Text textAlign="center" >No Items Added yet</Text>
       </Div>
 
