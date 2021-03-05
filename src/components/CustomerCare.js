@@ -20,7 +20,7 @@ const CustomerCare = () => {
             <Link to="/sizing" style={{ color: 'black', textDecoration: 'none' }}>Sizing</Link>
         </Col>
         <Col size={0}  >
-            <Text textColor="black600" textWeight="300" textSize='subheader' >Contact us</Text>
+            <Link to="/contact" style={{ color: 'black', textDecoration: 'none' }}>Contact</Link>
         </Col>
         </Row>
       </Div>

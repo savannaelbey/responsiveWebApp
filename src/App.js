@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import ReturnsPage from './pages/ReturnsPage';
 import DeliveryPage from './pages/DeliveryPage';
 import SizingPage from './pages/SizingPage';
+import ContactPage from './pages/ContactPage';
 
 
 
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path="/delivery">
               <DeliveryPage/>
+            </Route>
+            <Route path="/contact">
+              <ContactPage/>
             </Route>
             <Route path="/">
               <HomePage/>
