@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Button, Input } from 'atomize';
+import { Container, Button, Input, Label } from 'atomize';
 import { useHistory } from "react-router-dom";
 
 const Fieldset = styled.fieldset`
@@ -10,12 +10,6 @@ const Fieldset = styled.fieldset`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-`;
-
-const Label = styled.label`
-  font-family: var(--info-font);
-  font-size: 1.2rem;
-  margin-top: 1rem;
 `;
 
 const Select = styled.select`
@@ -38,7 +32,6 @@ const ContactForm = () => {
   const history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const contactForm = {
       reason: event.target.elements.reason.value,
       name: event.target.elements.name.value,
@@ -53,7 +46,7 @@ const ContactForm = () => {
     <>
       <Form
         onSubmit={(event) => handleSubmit(event)}
-        style={{ width: "500px" }}
+        style={{ width: "70%" }}
       >
         <Fieldset>
           <Label htmlFor="reason">Reason for contacting us:</Label>

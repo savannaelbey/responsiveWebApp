@@ -18,7 +18,6 @@ import ContactPage from './pages/ContactPage';
 import ThankyouPage from './pages/ThankyouPage';
 
 
-
 const debug = process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
 
 // 1. Create a client engine instance
