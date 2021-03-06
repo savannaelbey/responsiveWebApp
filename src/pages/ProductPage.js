@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
-import { Row, Div, Col, Container } from 'atomize';
+import { Col, Container } from 'atomize';
 import ProductImage from '../components/ProductImage';
 import ProductDetails from '../components/ProductDetails';
 import SizeDropdown from '../components/SizeDropdown';
@@ -26,7 +26,7 @@ const ProductPage = () => {
 
   return (
     <Container d='flex' flexDir={{ xs: 'column', lg: 'row' }} >
-      <Col p='0'  w={{ xs:"100%", md:"60%"}}>
+      <Col p='0'  w={{ xs:'100%', md:'60%'}}>
         <ProductImage/>
       </Col>
       <Col>
