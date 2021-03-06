@@ -113,9 +113,9 @@ So that I order the right size.
 
 ### Returns page:
 ![Screenshot 2021-03-06 at 19 58 58](https://user-images.githubusercontent.com/71889577/110219325-65ae4700-7eb6-11eb-92d5-c868051fd4cc.png)
-### Delivery page
+### Delivery page:
 ![Screenshot 2021-03-06 at 19 59 48](https://user-images.githubusercontent.com/71889577/110219347-824a7f00-7eb6-11eb-8640-44ef2912e267.png)
-### Contact page
+### Contact page:
 ![Screenshot 2021-03-06 at 20 00 31](https://user-images.githubusercontent.com/71889577/110219368-9c845d00-7eb6-11eb-805d-c77757825f30.png)
 
 
