@@ -3,16 +3,16 @@ import { Div } from "atomize";
 import styled from "styled-components";
 
 const Select = styled.select`
-  margin: 1ch;
-  font-size: 1.2rem;
-  padding: 0.2rem;
+  font-size: inherit;
+
+  padding: 0.5rem;
   border-radius: 5px;
   text-align: center;
 `;
 
 const SizeDropdown = () => {
   return (
-    <Div>
+    <Div d='flex' align="center"  justify="center">
     <Select defaultValue="Choose size" >
       <option value="Choose size" disabled="disabled" >Choose size</option>
       <option value="7">7</option>

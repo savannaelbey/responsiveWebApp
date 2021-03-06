@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
-import { Row, Col, Container } from 'atomize';
+import { Row, Div, Col, Container } from 'atomize';
 import ProductImage from '../components/ProductImage';
 import ProductDetails from '../components/ProductDetails';
 import SizeDropdown from '../components/SizeDropdown';
@@ -25,18 +25,16 @@ const ProductPage = () => {
   if (!product.title) return <div>loading</div>
 
   return (
-    <Container >
-      <Row>
-        <Col size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }} >
-          <ProductImage/>
-        </Col>
-        <Col>
-          <ProductDetails/>
-          <SizeDropdown/>
-          <AddToBag/>
-          <ProductDescription/>
-        </Col>
-      </Row>
+    <Container d='flex' flexDir={{ xs: 'column', lg: 'row' }} >
+      <Col p='0'  w={{ xs:"100%", md:"60%"}}>
+        <ProductImage/>
+      </Col>
+      <Col>
+        <ProductDetails/>
+        <SizeDropdown/>
+        <AddToBag/>
+        <ProductDescription/>
+      </Col>
     </Container>
   )
 }
