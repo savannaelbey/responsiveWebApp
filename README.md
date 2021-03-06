@@ -99,13 +99,25 @@ So that I order the right size.
 
 
 ## Screen shots
-### Home Page
-### Mens page
-### Product page
-### cart
-### Returns page
+### Home Page:
+![Screenshot 2021-03-06 at 19 43 37](https://user-images.githubusercontent.com/71889577/110218927-40203e00-7eb4-11eb-9995-fc280d2754b6.png)
+
+### Mens page:
+![Screenshot 2021-03-06 at 19 49 00](https://user-images.githubusercontent.com/71889577/110219081-000d8b00-7eb5-11eb-98ad-74a75d767549.png)
+
+### Product page:
+![Screenshot 2021-03-06 at 19 47 27](https://user-images.githubusercontent.com/71889577/110219036-c89ede80-7eb4-11eb-8031-d3c90e242b1e.png)
+
+### Cart:
+![Screenshot 2021-03-06 at 19 54 19](https://user-images.githubusercontent.com/71889577/110219204-bec9ab00-7eb5-11eb-89a0-27f32564dc9f.png)
+
+### Returns page:
+![Screenshot 2021-03-06 at 19 58 58](https://user-images.githubusercontent.com/71889577/110219325-65ae4700-7eb6-11eb-92d5-c868051fd4cc.png)
 ### Delivery page
+![Screenshot 2021-03-06 at 19 59 48](https://user-images.githubusercontent.com/71889577/110219347-824a7f00-7eb6-11eb-8640-44ef2912e267.png)
 ### Contact page
+![Screenshot 2021-03-06 at 20 00 31](https://user-images.githubusercontent.com/71889577/110219368-9c845d00-7eb6-11eb-805d-c77757825f30.png)
+
 
 ## Instructions to run the project:
 
