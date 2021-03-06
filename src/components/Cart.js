@@ -56,7 +56,7 @@ const Cart = () => {
                       }
                     />
                     <Text tag="label" textSize="heading" m={{ b: "2rem" }} textColor="black500">
-                      Total:
+                      Total: £165.90
                     </Text>
                     <Row border={{ t: '1px solid' }} p="0.7rem" borderColor="gray300">
                         <Anchor w="100%" href={checkout.webUrl} target="_blank" rel="noopener noreferrer">

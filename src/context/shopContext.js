@@ -22,11 +22,12 @@ class ShopProvider extends Component {
 
   componentDidMount() {
     // if local storage has a checkout Id saved, fetch thec checkout, else create new checkout
-    if (localStorage.checkout) {
-      this.fetchCheckout(localStorage.checkout);
-    } else {
-      this.createCheckout();
-    }
+    // if (localStorage.checkout) {
+    //   this.fetchCheckout(localStorage.checkout);
+    // } else {
+    //   this.createCheckout();
+    // }
+    this.createCheckout();
   }
 
   createCheckout = async () => {
@@ -35,11 +36,11 @@ class ShopProvider extends Component {
     await this.setState({ checkout: checkout });
   }
 
-  fetchCheckout = async (checkoutId) => {
-    client.checkout.fetch(checkoutId).then((checkout) => {
-      this.setState({ checkout: checkout });
-    });
-  }
+  // fetchCheckout = async (checkoutId) => {
+  //   client.checkout.fetch(checkoutId).then((checkout) => {
+  //     this.setState({ checkout: checkout });
+  //   });
+  // }
 
   // addDiscount = async (checkoutId, discountCode) => {
   //   client.checkout.addDiscount(checkoutId, discountCode).then(checkout => { });

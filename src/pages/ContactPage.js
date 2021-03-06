@@ -1,5 +1,5 @@
 import React from 'react';
-import { Div, Text, Container } from 'atomize';
+import { Text, Container } from 'atomize';
 import ContactBanner from '../components/ContactBanner';
 import ContactForm from '../components/ContactForm';
 

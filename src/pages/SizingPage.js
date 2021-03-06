@@ -6,7 +6,7 @@ const SizingPage = () => {
   return (
     <Container>
       <SizingBanner/>
-      <Div p='16rem'>
+      <Div p='7rem'>
         <Text textAlign="center">Sizing guide goes here</Text>
       </Div>
     </Container>

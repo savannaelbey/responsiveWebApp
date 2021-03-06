@@ -1,7 +1,5 @@
-import React, {useContext, useEffect} from 'react';
-import {ShopContext} from '../context/shopContext';
-import { Text, Div, Row, Col, Container } from "atomize";
-import {Link} from 'react-router-dom';
+import React from 'react';
+import { Div, Container } from "atomize";
 import SubscriptionForm from '../components/SubscriptionForm';
 import homepageBackground from '../img/homepage-background.png';
 

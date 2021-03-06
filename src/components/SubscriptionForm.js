@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React from 'react';
 import { Text, Div, Input, Button } from "atomize";
 import { useHistory } from "react-router-dom";
 
@@ -17,19 +17,21 @@ const SubscriptionForm = () => {
     <Div bg="gray400" p="2rem">
      <Text textAlign="center" p="1rem" textColor="black400" >{header}</Text>
      <Input
-       placeholder="Enter your email"
-       suffix={
-         <Button onClick={(event) => handleSubscribe(event)}
-           pos="absolute"
-           bg="black"
-           top="0"
-           right="0"
-           rounded={{ r: "md" }}
-         >
-           Subscribe
-         </Button>
-       }
-     />
+      type="email"
+      name="email"
+      placeholder="Enter your email"
+      suffix={
+        <Button onClick={(event) => handleSubscribe(event)}
+          pos="absolute"
+          bg="black"
+          top="0"
+          right="0"
+          rounded={{ r: "md" }}
+        >
+          Subscribe
+        </Button>
+      }
+    />
    </Div>
   );
 }

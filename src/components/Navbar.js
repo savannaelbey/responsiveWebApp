@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Icon, Row, Col, Text, Div, Image } from 'atomize';
+import { Container, Icon, Row, Col, Image } from 'atomize';
 import {Link} from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
 import logo from "../img/golden-shoe-logo.png";

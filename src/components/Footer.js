@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Anchor, Container, Icon, Col, Text, Div } from "atomize";
+import { Row, Anchor, Container, Icon, Col, Text } from "atomize";
 
 const Footer = () => {
   return (

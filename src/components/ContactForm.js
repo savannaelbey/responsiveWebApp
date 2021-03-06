@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Button, Input, Label } from 'atomize';
+import { Button, Input, Label } from 'atomize';
 import { useHistory } from "react-router-dom";
 
 const Fieldset = styled.fieldset`
