@@ -5,6 +5,8 @@ import { Text, Div, Button, Row, Col, Container, Anchor } from 'atomize';
 import ProductImage from '../components/ProductImage';
 import ProductDetails from '../components/ProductDetails';
 import SizeDropdown from '../components/SizeDropdown';
+import AddToBag from '../components/AddToBag';
+import ProductDescription from '../components/ProductDescription';
 
 const ProductPage = () => {
   let { id } = useParams();
@@ -17,14 +19,12 @@ const ProductPage = () => {
   useEffect(() => {
     fetchProductWithId(id);
     return () => {
-
     };
   }, [ fetchProductWithId, id ])
 
   if (!product.title) return <div>loading</div>
 
   return (
-
     <Container >
       <Row>
         <Col size={{ xs: "6", sm: "5", md: "4", lg: "3", xl: "3" }} >
@@ -33,13 +33,8 @@ const ProductPage = () => {
         <Col>
           <ProductDetails/>
           <SizeDropdown/>
-          <Button w={{ xs: 'auto', md: '10vw' }} m={{ y: '2rem' }} onClick={() => {
-            addItemToCheckout(product.variants[0].id, 1);
-            openCart();
-            }}>
-            Add To Bag
-          </Button>
-          <Text tag="p" textSize="paragraph" textColor="gray900" textWeight="200">{product.description}</Text>
+          <AddToBag/>
+          <ProductDescription/>
         </Col>
       </Row>
     </Container>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Div, Container, Text } from 'atomize';
+import { Div, Text } from 'atomize';
 import { ShopContext } from '../context/shopContext';
 
 const ProductDetails = () => {
