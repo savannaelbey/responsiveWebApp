@@ -5,7 +5,6 @@ import { ShopContext } from '../context/shopContext';
 const ProductDetails = () => {
   const { product } = useContext(ShopContext);
   const productTitle = product.title;
-  const productPrice = product.variants[0].price;
   const productTaxedPrice = (product.variants[0].price * 1.05).toFixed(2);
   return (
     <Div>

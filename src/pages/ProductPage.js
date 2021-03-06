@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/shopContext';
-import { Text, Div, Button, Row, Col, Container, Anchor } from 'atomize';
+import { Row, Col, Container } from 'atomize';
 import ProductImage from '../components/ProductImage';
 import ProductDetails from '../components/ProductDetails';
 import SizeDropdown from '../components/SizeDropdown';
@@ -10,10 +10,10 @@ import ProductDescription from '../components/ProductDescription';
 
 const ProductPage = () => {
   let { id } = useParams();
-  const { fetchProductWithId, addItemToCheckout, product, openCart } = useContext(ShopContext);
-  //console.log(product)
-  //console.log(product.options)
-  //  console.log(product.options[1])
+  const { fetchProductWithId, product } = useContext(ShopContext);
+  // console.log(product)
+  // console.log(product.options)
+  // console.log(product.options[1])
   // console.log(product.options[1].values)
   // console.log(product.options[1].values.map(size => size.value))
   useEffect(() => {
