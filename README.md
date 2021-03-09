@@ -2,7 +2,7 @@
 # Golden Shoe
 This project is a responsive e-commerce web app that is easy to view on any device/screen size with a number of implemented features to improve user experience.
 
-I have really enjoyed developing this web site and I hope you like it :)
+
 
 ## User stories
 
