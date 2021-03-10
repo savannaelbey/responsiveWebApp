@@ -1,5 +1,5 @@
 
-# Golden Shoe
+# Project
 This project is a responsive e-commerce web app that is easy to view on any device/screen size with a number of implemented features to improve user experience.
 
 
@@ -8,7 +8,7 @@ This project is a responsive e-commerce web app that is easy to view on any devi
 
 ```
 As a customer,
-I would like to visit GoldenShoe's website from any devise,
+I would like to visit the website from any devise,
 So that I can browse the site anytime anywhere.
 ```
 
@@ -26,12 +26,6 @@ So that I can save money without having to go in store.
 
 ```
 As a customer,
-I would like to be able to use my discount vouchers when shopping online,
-So that I can save money without having to go in store.
-```
-
-```
-As a customer,
 I would like to see all the shoes for my gender,
 So that I can choose which shoe I like.
 ```
@@ -39,7 +33,7 @@ So that I can choose which shoe I like.
 ```
 As a customer,
 I would like to be able to select a product and see the details of that product
-So that I can find out more about the shoe that I like before adding to shooping bag.
+So that I can find out more about the shoe that I like before adding it to my shopping bag.
 ```
 
 ```
@@ -58,7 +52,7 @@ So that it is convenient for me.
 ```
 As a customer,
 I would like to see what items I have in my shopping bag,
-So that it don't order the wrong shoe.
+So that I don't order the wrong shoe.
 ```
 
 ```
