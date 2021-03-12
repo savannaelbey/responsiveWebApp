@@ -154,10 +154,10 @@ So that I order the right size.
 
 ## Dependencies
 
-* Shopify JavaScript Buy SDK
-* Nodejs
 * React
-* Atomize - UI design system for web apps.
+* Shopify JavaScript Buy SDK
+* Nodejs 
+* Atomize
 * Styles
 * Styletron
 * React-router
