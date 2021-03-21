@@ -3,7 +3,7 @@ import Client from 'shopify-buy';
 
 const ShopContext = React.createContext();
 
-// Initializing a client to return content in the store's primary language
+// Initializing a client to return content
 const client = Client.buildClient({
   domain: 'graphql.myshopify.com',
   storefrontAccessToken: 'dd4d4dc146542ba7763305d71d1b3d38'
@@ -11,7 +11,6 @@ const client = Client.buildClient({
 
 
 class ShopProvider extends Component {
-
   state = {
     products: [],
     product: {},
@@ -21,29 +20,26 @@ class ShopProvider extends Component {
 
   componentDidMount() {
     // if local storage has a checkout Id saved, fetch thec checkout, else create new checkout
-    // if (localStorage.checkout) {
-    //   this.fetchCheckout(localStorage.checkout);
-    // } else {
-    //   this.createCheckout();
-    // }
-    this.createCheckout();
+    if (localStorage.checkout) {
+      this.fetchCheckout(localStorage.checkout);
+     } else {
+      this.createCheckout();
+     }
+
   }
 
   createCheckout = async () => {
-    const checkout = await client.checkout.create();
-    localStorage.setItem("checkout", checkout.id);
-    await this.setState({ checkout: checkout });
+    client.checkout.create().then((checkout) => {
+      localStorage.setItem("checkout", checkout.id);
+      this.setState({ checkout: checkout });
+    });
   }
 
-  // fetchCheckout = async (checkoutId) => {
-  //   client.checkout.fetch(checkoutId).then((checkout) => {
-  //     this.setState({ checkout: checkout });
-  //   });
-  // }
-
-  // addDiscount = async (checkoutId, discountCode) => {
-  //   client.checkout.addDiscount(checkoutId, discountCode).then(checkout => { });
-  // }
+  fetchCheckout = async (checkoutId) => {
+    client.checkout.fetch(checkoutId).then((checkout) => {
+      this.setState({ checkout: checkout });
+    });
+  }
 
   fetchAllProducts = async () => {
     client.product.fetchAll().then((products) => { this.setState({ products: products }) });
