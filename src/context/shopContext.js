@@ -60,6 +60,12 @@ class ShopProvider extends Component {
 
   openCart = () => { this.setState( {isCartOpen: true} )}
 
+  removeItemInCheckout = async (itemId) => {
+    client.checkout.removeLineItems(this.state.checkout.id, [itemId]).then((checkout) => {
+      this.setState({ checkout: checkout})
+    });
+  }
+
   render() {
     return (
       <ShopContext.Provider
@@ -70,6 +76,7 @@ class ShopProvider extends Component {
           addItemToCheckout: this.addItemToCheckout,
           closeCart: this.closeCart,
           openCart: this.openCart,
+          removeItemInCheckout: this.removeItemInCheckout
         }}
       >
         {this.props.children}
