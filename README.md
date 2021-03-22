@@ -140,23 +140,23 @@ So that I order the right size.
   ```
 
   A web browser should automatically open [http://localhost:3000](http://localhost:3000).
-  
+
 ## Extension features
 
 * Chatbot with automated FAQs
 * Online return creation form
-* Like items 
-* Add product reviews 
-* Recommend similar products 
+* Like items
+* Add product reviews
+* Recommend similar products
 * Notify customer when product is back in stock
 * Filter items by preferences
-* User account with wish list that can be used by friends to buy presents 
+* User account with wish list that can be used by friends to buy presents
 
 ## Dependencies
 
 * React
 * Shopify JavaScript Buy SDK
-* Nodejs 
+* Nodejs
 * Atomize
 * Styles
 * Styletron
@@ -164,6 +164,7 @@ So that I order the right size.
 
 
 ## Resources
+* context: https://reactjs.org/docs/context.html
 * http://shopify.github.io/js-buy-sdk/
 * https://reactrouter.com/web/example/url-params
 * https://www.styletron.org/getting-started#with-react

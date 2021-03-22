@@ -1,14 +1,14 @@
+
 import React, { Component } from 'react';
 import Client from 'shopify-buy';
 
+// Create a context object
 const ShopContext = React.createContext();
-
 // Initializing a client to return content
 const client = Client.buildClient({
-  domain: 'graphql.myshopify.com',
-  storefrontAccessToken: 'dd4d4dc146542ba7763305d71d1b3d38'
+  domain: process.env.REACT_APP_DOMAIN,
+  storefrontAccessToken: process.env.REACT_APP_STORE_FRONT_ACCESS_TOKEN
 });
-
 
 class ShopProvider extends Component {
   state = {
@@ -25,7 +25,6 @@ class ShopProvider extends Component {
      } else {
       this.createCheckout();
      }
-
   }
 
   createCheckout = async () => {
@@ -68,9 +67,9 @@ class ShopProvider extends Component {
           ...this.state,
           fetchAllProducts: this.fetchAllProducts,
           fetchProductWithId: this.fetchProductWithId,
+          addItemToCheckout: this.addItemToCheckout,
           closeCart: this.closeCart,
           openCart: this.openCart,
-          addItemToCheckout: this.addItemToCheckout
         }}
       >
         {this.props.children}
@@ -79,6 +78,6 @@ class ShopProvider extends Component {
   }
 }
 
-const ShopConsumer = ShopContext.Consumer;
-export {ShopConsumer, ShopContext};
+//const ShopConsumer = ShopContext.Consumer;
+export { ShopContext};
 export default ShopProvider;
