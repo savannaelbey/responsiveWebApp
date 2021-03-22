@@ -5,6 +5,7 @@ import {ShopContext} from '../context/shopContext'
 const Cart = () => {
 
     const { isCartOpen, closeCart, checkout } = useContext(ShopContext)
+    console.log(checkout)
 
     if (checkout.lineItems) {
         return (
@@ -32,7 +33,7 @@ const Cart = () => {
                                             <Text textColor="gray">Quantity: {item.quantity}</Text>
                                         </Col>
                                         <Col>
-                                            <Text>£{(item.variant.price *1.05).toFixed(2)}</Text>
+                                            <Text>£{item.variant.price }</Text>
                                         </Col>
                                     </Row>
                                 ))}
@@ -56,7 +57,7 @@ const Cart = () => {
                       }
                     />
                     <Text tag="label" textSize="heading" m={{ b: "2rem" }} textColor="black500">
-                      Total: £165.90
+                      £{checkout.totalPrice}
                     </Text>
                     <Row border={{ t: '1px solid' }} p="0.7rem" borderColor="gray300">
                         <Anchor w="100%" href={checkout.webUrl} target="_blank" rel="noopener noreferrer">

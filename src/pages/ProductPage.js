@@ -18,8 +18,6 @@ const ProductPage = () => {
   // console.log(product.options[1].values.map(size => size.value))
   useEffect(() => {
     fetchProductWithId(id);
-    return () => {
-    };
   }, [ fetchProductWithId, id ])
 
   if (!product.title) return <div>loading</div>

@@ -9,9 +9,6 @@ const MensPage = () => {
 
   useEffect(()=> {
     fetchAllProducts()
-    return () => {
-
-    };
   }, [fetchAllProducts])
 
   if(!products) {
@@ -38,7 +35,7 @@ const MensPage = () => {
                         >
                     </Div>
                     <Text tag='h1' textWeight='300' textAlign='center' textSize='subheader' textDecor='none' textColor='black500'>{product.title} </Text>
-                    <Text tag='h2' textWeight='500' textAlign='center' textSize='body' textDecor='none' textColor='gray500'>£{(product.variants[0].price * 1.05).toFixed(2)}</Text>
+                    <Text tag='h2' textWeight='500' textAlign='center' textSize='body' textDecor='none' textColor='gray500'>£{(product.variants[0].price)}</Text>
                 </Div>
             </Link>
         </Col>
