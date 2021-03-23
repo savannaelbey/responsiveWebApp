@@ -4,7 +4,7 @@ import { ShopContext } from '../context/shopContext';
 import { Col, Container } from 'atomize';
 import ProductImage from '../components/ProductImage';
 import ProductDetails from '../components/ProductDetails';
-import SizeDropdown from '../components/SizeDropdown';
+import SizeSelector from '../components/SizeSelector';
 import AddToBag from '../components/AddToBag';
 import ProductDescription from '../components/ProductDescription';
 
@@ -22,6 +22,8 @@ const ProductPage = () => {
 
   if (!product.title) return <div>loading</div>
 
+  console.log(product.options)
+
   return (
     <Container d='flex' flexDir={{ xs: 'column', lg: 'row' }} >
       <Col p='0'  w={{ xs:'100%', md:'60%'}}>
@@ -29,7 +31,7 @@ const ProductPage = () => {
       </Col>
       <Col>
         <ProductDetails/>
-        <SizeDropdown/>
+        <SizeSelector/>
         <AddToBag/>
         <ProductDescription/>
       </Col>

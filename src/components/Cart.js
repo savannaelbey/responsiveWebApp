@@ -5,7 +5,7 @@ import {ShopContext} from '../context/shopContext'
 const Cart = () => {
 
     const { isCartOpen, closeCart, checkout, removeItemInCheckout } = useContext(ShopContext)
-    console.log(checkout.lineItems)
+    //console.log(checkout)
 
     if (checkout.lineItems) {
         return (
