@@ -9,13 +9,14 @@ const client = Client.buildClient({
   domain: process.env.REACT_APP_DOMAIN,
   storefrontAccessToken: process.env.REACT_APP_STORE_FRONT_ACCESS_TOKEN
 });
-
+//console.log(client)
 class ShopProvider extends Component {
   state = {
     products: [],
     product: {},
     checkout: {},
     isCartOpen: false,
+    selectedOption: {}
   }
 
   componentDidMount() {
@@ -66,6 +67,13 @@ class ShopProvider extends Component {
     });
   }
 
+  handleOptionChange = (event) => {
+    console.log(event)
+    client.product.helpers.variantForOptions(this.state.product, event.target.value).then((variant) => {
+      this.setState({selectedOption: variant})
+    });
+  }
+
   render() {
     return (
       <ShopContext.Provider
@@ -76,7 +84,7 @@ class ShopProvider extends Component {
           addItemToCheckout: this.addItemToCheckout,
           closeCart: this.closeCart,
           openCart: this.openCart,
-          removeItemInCheckout: this.removeItemInCheckout
+          removeItemInCheckout: this.removeItemInCheckout,
         }}
       >
         {this.props.children}
@@ -85,6 +93,5 @@ class ShopProvider extends Component {
   }
 }
 
-//const ShopConsumer = ShopContext.Consumer;
 export { ShopContext};
 export default ShopProvider;

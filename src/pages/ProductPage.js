@@ -22,8 +22,6 @@ const ProductPage = () => {
 
   if (!product.title) return <div>loading</div>
 
-  console.log(product.options)
-
   return (
     <Container d='flex' flexDir={{ xs: 'column', lg: 'row' }} >
       <Col p='0'  w={{ xs:'100%', md:'60%'}}>

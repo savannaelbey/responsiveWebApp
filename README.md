@@ -1,6 +1,6 @@
 
 # Project
-This project is a responsive e-commerce web app that is easy to view on any device/screen size with a number of implemented features to improve user experience.
+This project is a responsive e-commerce web app that is easy to view on any device/screen size with a number of implemented features.
 
 
 
@@ -14,40 +14,15 @@ So that I can browse the site anytime anywhere.
 
 ```
 As a customer,
-I would like to receive newsletters and discount vouchers to my email,
-So that I can be environmentally friendly and for ease of use.
-```
-
-```
-As a customer,
-I would like to be able to use my discount vouchers when shopping online,
-So that I can save money without having to go in store.
-```
-
-```
-As a customer,
 I would like to see all the shoes for my gender,
-So that I can choose which shoe I like.
+So that I can view the one I like.
 ```
 
 ```
 As a customer,
-I would like to be able to select a product and see the details of that product
-So that I can find out more about the shoe that I like before adding it to my shopping bag.
+I would like to see all the relevant details of my selected product,
+So that I have the info I need before adding it to my shopping bag.
 ```
-
-```
-As a customer,
-I would like to know if my size is out of stock,
-So that I don't have to pay and then be informed.
-```
-
-```
-As a customer,
-I would like to be able to contact customer service any time of the day,
-So that it is convenient for me.
-```
-
 
 ```
 As a customer,
@@ -89,6 +64,30 @@ So that I can return my order if I need to.
 As a customer,
 I would like to see the sizing guide,
 So that I order the right size.
+```
+
+```
+As a customer,
+I would like to know if my size is out of stock,
+So that I don't have to pay and then be informed.
+```
+
+```
+As a customer,
+I would like to be able to contact customer service any time of the day,
+So that it is convenient for me.
+```
+
+```
+As a customer,
+I would like to receive newsletters and discount vouchers to my email,
+So that I can be environmentally friendly and for ease of use.
+```
+
+```
+As a customer,
+I would like to be able to use my discount vouchers when shopping online,
+So that I can save money without having to go in store.
 ```
 
 
@@ -171,5 +170,4 @@ So that I order the right size.
 * https://reactrouter.com/web/example/url-params
 * https://atomizecode.com/docs/react/molecules
 * https://github.com/Shopify/storefront-api-examples/tree/master/react-js-buy
-* https://github.com/iamelimars/shopify-react
 * https://reactjs.org/docs/hooks-reference.html

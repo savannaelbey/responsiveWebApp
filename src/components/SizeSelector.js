@@ -12,14 +12,18 @@ const Select = styled.select`
 `;
 
 const SizeSelector = () => {
-  const { product } = useContext(ShopContext);
+  const { product, handleOptionChange } = useContext(ShopContext);
   return (
     <Div d='flex' align="center"  justify="center">
-    <Select defaultValue="Choose size" key={product.options[1].name} >
-    <option value="Choose size" disabled="disabled" >Choose size</option>
-    {product.options[1].values.map(size => (
+    <Select
+      defaultValue="Choose size"
+      key={product.options[1].name}
+      onChange={handleOptionChange}
+    >
+      <option value="Choose size" disabled="disabled" >Choose size</option>
+      {product.options[1].values.map(size => (
         <option key={size.value}>{size.value}</option>
-    ))}
+      ))}
     </Select>
     </Div>
   );
