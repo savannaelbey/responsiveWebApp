@@ -8,7 +8,7 @@ const Footer = () => {
       </Row>
       <Row bg="gray200" p="1rem" >
         <Col >
-            <Text textColor="black500" textWeight="300" textSize={{ xs: "tiny", md: "caption" }} >&#9400; Golden Shoe 2021. All rights reserved</Text>
+            <Text textColor="black500" textWeight="300" textSize={{ xs: "tiny", md: "caption" }} >&#9400; Golden Shoe By Savanna 2021. All rights reserved</Text>
         </Col>
         <Col size={0}>
           <Anchor w={{ xs: 'auto', md: 'auto', sm: "auto", lg: "auto", xl: "auto"  }} href='http://facebook.com' >
